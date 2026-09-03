@@ -8,10 +8,10 @@ android {
     compileSdk = 34
     defaultConfig {
         applicationId = "app.lumen.chess"
-        minSdk = 24 // Android 7 Support
+        minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "2.0.0-Premium"
     }
     buildFeatures { compose = true }
     compileOptions {
@@ -27,9 +27,12 @@ dependencies {
     implementation(composeBom)
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material3:material3-window-size-class")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.2")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
     implementation("com.github.bhlangonijr:chesslib:1.3.3")
+    
+    // NATIVE STOCKFISH 18 BUNDLED!
+    implementation("fr.axl-lvy:stockfish-multiplatform:0.1.0")
 }
