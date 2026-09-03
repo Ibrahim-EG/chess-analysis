@@ -8,7 +8,7 @@ android {
     compileSdk = 34
     defaultConfig {
         applicationId = "app.lumen.chess"
-        minSdk = 24
+        minSdk = 26 // BUMPED TO 26 FOR NATIVE STOCKFISH SUPPORT
         targetSdk = 34
         versionCode = 2
         versionName = "2.0.0-Premium"
