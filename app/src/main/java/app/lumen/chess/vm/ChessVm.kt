@@ -80,7 +80,7 @@ class ChessVm(app: Application) : AndroidViewModel(app) {
             while (!s.isReady) {
                 delay(100)
             }
-            _ui.update { it.copy(status = s.name) }
+            _ui.update { it.copy(status = "Engine Ready") }
             analyse()
         }
     }
