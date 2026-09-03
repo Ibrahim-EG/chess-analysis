@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
@@ -31,7 +32,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.ui.layout.aspectRatio
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -74,7 +75,10 @@ fun LumenRoot() {
                 }
                 Spacer(Modifier.height(16.dp))
                 ui.lastBadge?.let { b ->
-                    Card(colors = CardDefaults.cardColors(containerColor = b.badge.color.copy(alpha = 0.15f)), border = CardDefaults.outlinedCardBorder().copy(b.badge.color)) {
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = b.badge.color.copy(alpha = 0.15f)), 
+                        border = BorderStroke(2.dp, b.badge.color)
+                    ) {
                         Column(Modifier.padding(12.dp)) {
                             Text(b.badge.label, color = b.badge.color, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                             Text("Centipawn Loss: ${b.cpl}", color = Lamp.TextDim, fontSize = 12.sp)
