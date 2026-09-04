@@ -32,7 +32,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.layout.aspectRatio
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -184,4 +184,4 @@ fun EvalBar(cp: Int, inverted: Boolean, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Header(ui: UiState) { Column { Text("L U M E N", color = Lamp.Gold, fontSize = 18.sp, fontWeight = FontWeight.W200, letterSpacing = .4.sp * 8); Text(ui.status, color = Lamp.TextDim, fontSize = 11.sp, letterSpacing = 1.5.sp) } }
+fun Header(ui: UiState) { Column { Text("L U M E N", color = Lamp.Gold, fontSize = 18.sp, fontWeight = FontWeight.W200, letterSpacing = .4.sp * 8); Text(ui.status, color = Lamp.TextDim, fontSize = 11.sp, letterSpacing = 1.5.sp) } } 
